@@ -21,4 +21,18 @@ public class PlayerMove : MonoBehaviour
                                     Input.GetAxis("Vertical"));
         characterController.SimpleMove(move * speed);
     }
+
+    void FixedUpdate()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 100))
+        {
+            Debug.DrawLine(ray.origin, hit.point);
+            Vector3 dir = hit.point - transform.position;
+            dir = new Vector3(dir.x, 0, dir.z);
+            transform.forward = dir;
+        }
+    }
 }
