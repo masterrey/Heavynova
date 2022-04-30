@@ -8,6 +8,8 @@ public class PlayerMove : MonoBehaviour
     public CharacterController characterController;
     public float speed = 2;
     Vector3 move;
+    //referencia da camera
+    public GameObject cam;
     void Start()
     {
         
@@ -18,7 +20,12 @@ public class PlayerMove : MonoBehaviour
     {
          move = new Vector3(Input.GetAxis("Horizontal"),
                                     0,
-                                    Input.GetAxis("Vertical"));
+                             Input.GetAxis("Vertical"));
+
+        //teste a camera q melhor vc goste
+        //move = cam.transform.TransformDirection(move);
+        move = transform.TransformDirection(move);
+
         characterController.SimpleMove(move * speed);
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     public ParticleSystem particula;
+    public AudioSource shoot;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class PlayerShoot : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             particula.Emit(1);
+            shoot.Play();
         }
     }
 }
