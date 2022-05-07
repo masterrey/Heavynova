@@ -7208,6 +7208,7 @@ GameObject:
   - component: {fileID: 1223763625}
   - component: {fileID: 1223763624}
   - component: {fileID: 1223763623}
+  - component: {fileID: 1223763627}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -7225,7 +7226,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -7300,6 +7301,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1223763627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223763622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c055b630397e7479784f1384eec90f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1862166620}
+  agent: {fileID: 1223763623}
 --- !u!1001 &1240300252
 PrefabInstance:
   m_ObjectHideFlags: 0
